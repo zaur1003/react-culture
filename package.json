@@ -1,0 +1,24 @@
+{
+  "name": "@zma-lab/react-culture",
+  "version": "1.0.0",
+  "description": "Introducing locale base culture and localization for numbers, currencies and dates",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -fR dist && mkdir dist && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p .",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaur1003/react-culture.git"
+  },
+  "author": "zaur_mahmudov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaur1003/react-culture/issues"
+  },
+  "homepage": "https://github.com/zaur1003/react-culture#readme",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
