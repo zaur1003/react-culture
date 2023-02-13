@@ -4,9 +4,8 @@
   "description": "Introducing locale base culture and localization for numbers, currencies and dates",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -fR dist && mkdir dist && npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc -p .",
-    "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+    "build": "rm -fR dist && mkdir dist && npm run build:esm",
+    "build:esm": "tsc -p ."
   },
   "repository": {
     "type": "git",

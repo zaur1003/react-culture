@@ -1,13 +1,10 @@
-import { TimeZoneType } from "./timeZone";
-
 /** Interfaces */
 export interface InitializerInterface {
+  locale?: string;
   calendar?: CalendarType;
   collation?: CollationType;
   currency?: CurrencyType;
   numberingSystem?: NumberingSystemType;
-  timeZone?: TimeZoneType;
-  unit?: UnitType;
 }
 
 /** Types */
