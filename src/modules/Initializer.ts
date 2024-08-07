@@ -8,7 +8,7 @@ export const main = (initConfig: InitializerInterface): void => {
   localStorage.setItem(GENERAL_CONFIG.LOCAL_STORAGE_NAME, configString);
 };
 
-export const reconfigure = (reInitConfig: InitializerInterface): void => {
+export const updateConfigure = (reInitConfig: InitializerInterface): void => {
   const prevConfigString: string | null =
     localStorage.getItem(GENERAL_CONFIG.LOCAL_STORAGE_NAME) ?? "{}";
 

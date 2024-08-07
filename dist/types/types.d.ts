@@ -1,11 +1,23 @@
 /** Interfaces */
-export interface InitializerInterface {
+export type InitializerInterface = {
     locale?: string;
     calendar?: CalendarType;
     collation?: CollationType;
     currency?: CurrencyType;
     numberingSystem?: NumberingSystemType;
-}
+    dateOptions?: DateOptions;
+};
+export type DateOptions = {
+    weekday?: "long" | "short" | "narrow";
+    era?: "narrow" | "short" | "long";
+    year?: "numeric" | "2-digit";
+    month?: "numeric" | "2-digit" | "narrow" | "short" | "long";
+    day?: "numeric" | "2-digit";
+    hour?: "numeric" | "2-digit";
+    minute?: "numeric" | "2-digit";
+    second?: "numeric" | "2-digit";
+    timeZoneName?: "short" | "long";
+};
 /** Types */
 export type CalendarType = "buddhist" | "chinese" | "coptic" | "dangi" | "ethioaa" | "ethiopic" | "gregory" | "hebrew" | "indian" | "islamic" | "islamic-civil" | "islamic-rgsa" | "islamic-tbla" | "islamic-umalqura" | "iso8601" | "japanese" | "persian" | "roc";
 export type CollationType = "compat" | "emoji" | "eor" | "phonebk" | "pinyin" | "reformed" | "searchjl" | "stroke" | "trad" | "unihan" | "zhuyin";

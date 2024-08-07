@@ -23,14 +23,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.formatCurrency = exports.formatNumber = exports.ReInitializeCulture = exports.InitializeCulture = void 0;
+exports.formatDate = exports.formatCurrency = exports.formatNumber = exports.UpdateCulture = exports.InitializeCulture = void 0;
 const Initializer = __importStar(require("./modules/Initializer"));
 const NumberFormatter = __importStar(require("./modules/formatNumber"));
 const CurrencyFormatter = __importStar(require("./modules/formatCurrency"));
+const DateFormatter = __importStar(require("./modules/formatDate"));
 /** Initializer */
 exports.InitializeCulture = Initializer.main;
-exports.ReInitializeCulture = Initializer.reconfigure;
+exports.UpdateCulture = Initializer.updateConfigure;
 /** Formatters */
 exports.formatNumber = NumberFormatter.formatNumber;
 exports.formatCurrency = CurrencyFormatter.formatCurrency;
+exports.formatDate = DateFormatter.formatDate;
 //# sourceMappingURL=index.js.map

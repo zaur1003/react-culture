@@ -6,7 +6,7 @@ const validateLocale = (locale) => {
     if (!locale)
         return false;
     try {
-        const availableCanonicalLocales = Intl.getCanonicalLocales(locale);
+        const availableCanonicalLocales = Intl.getCanonicalLocales(locale); // TODO: work on the way to support older / not rely on INTL
         return availableCanonicalLocales.length > 0;
     }
     catch (err) {

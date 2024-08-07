@@ -1,11 +1,24 @@
 /** Interfaces */
-export interface InitializerInterface {
+export type InitializerInterface = {
   locale?: string;
   calendar?: CalendarType;
   collation?: CollationType;
   currency?: CurrencyType;
   numberingSystem?: NumberingSystemType;
-}
+  dateOptions?: DateOptions;
+};
+
+export type DateOptions = {
+  weekday?: "long" | "short" | "narrow";
+  era?: "narrow" | "short" | "long";
+  year?: "numeric" | "2-digit";
+  month?: "numeric" | "2-digit" | "narrow" | "short" | "long";
+  day?: "numeric" | "2-digit";
+  hour?: "numeric" | "2-digit";
+  minute?: "numeric" | "2-digit";
+  second?: "numeric" | "2-digit";
+  timeZoneName?: "short" | "long";
+};
 
 /** Types */
 export type CalendarType =

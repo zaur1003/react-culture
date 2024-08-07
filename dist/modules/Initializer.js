@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.reconfigure = exports.main = void 0;
+exports.updateConfigure = exports.main = void 0;
 const general_1 = __importDefault(require("../config/general"));
 const validator_1 = require("../utils/validator");
 const main = (initConfig) => {
@@ -12,7 +12,7 @@ const main = (initConfig) => {
     localStorage.setItem(general_1.default.LOCAL_STORAGE_NAME, configString);
 };
 exports.main = main;
-const reconfigure = (reInitConfig) => {
+const updateConfigure = (reInitConfig) => {
     const prevConfigString = localStorage.getItem(general_1.default.LOCAL_STORAGE_NAME) ?? "{}";
     const mainConfig = JSON.parse(prevConfigString);
     const config = (0, validator_1.validateInitConfig)(reInitConfig);
@@ -21,5 +21,5 @@ const reconfigure = (reInitConfig) => {
     localStorage.removeItem(general_1.default.LOCAL_STORAGE_NAME);
     localStorage.setItem(general_1.default.LOCAL_STORAGE_NAME, newConfigString);
 };
-exports.reconfigure = reconfigure;
+exports.updateConfigure = updateConfigure;
 //# sourceMappingURL=Initializer.js.map
